@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Promocion",
+        "precio": 36,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Zarzamora",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Frutos Rojos",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Arandanos",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Frambuesas",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Fresas",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Fresas y Frambuesas",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Fresa y Zarzamora",
+        "precio": 18,
+        "img": "https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png",
+        "cantidad": 1
+    }
+]

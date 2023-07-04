@@ -50,7 +50,8 @@
                 </div>
                 <div class="items">
                     <span class="ti ti-user-circle" onclick="login()"></span>
-                    <span style="margin-left: 10px;" class="ti ti-shopping-bag"></span>
+                    <span style="margin-left: 10px;" class="ti ti-shopping-bag" id="verCarrito"></span>
+                    <span id="cantidadCarrito" class="cantidad-Carrito"></span>
                 </div>
             </div>
         </nav>
@@ -96,11 +97,10 @@
                             <hr
                                 style="margin-bottom: 5rem; margin-left: 300px; margin-top: 5rem; margin-right: 300px; color: black;">
                             <ul>
-                                <li style="text-decoration-line: line-through;">ANTES $60.⁰⁰</li>
-                                <li style="font-weight: bold; font-size: 22px;">AHORA $36.⁰⁰</li>
+                                <li style="text-decoration-line: line-through; font-size: 1.5rem;">ANTES $60.⁰⁰</li>
+                                <li style="font-weight: bold; font-size: 1.5rem;">AHORA $36.⁰⁰</li>
                             </ul>
                             <br><br><br>
-                            <button class="btn1" onclick="shopping()">Añadir al Carrito</button>
                         </div>
                     </div>
                 </div>
@@ -108,13 +108,20 @@
             </div>
         </section>
         <!--Todo: Catálogo de Productos -->
+        <!--? Modal Content -->
+        <div id="modal-container" class="modal-container"></div>
         <section>
             <div>
                 <h1 id="productos" class="titulo-card">Catálogo de Productos</h1>
-                <h3 class="mas-vendidos">Los Más Vendidos!</h3>
             </div>
-            <section>
-                <div>
+            <h3 class="product-title" style="color: var(--main-color-text);">Nuestros Productos</h3>
+            <!--? Productos Js Funcionales -->
+            <div id="shopContent" class="shop-content"></div>
+
+            <!--! INICIO: Error en la seccion -->
+            <!-- <section> -->
+            <!-- <div>
+                    <h3 style="margin-top: 80px;" class="mas-vendidos">Los Más Vendidos!</h3>
                     <div class="glide__track" data-glide-el="track">
                         <ul style="margin-left: 240px;" class="glide__slides">
                             <li style="display: flex;" class="glide__slide">
@@ -125,19 +132,16 @@
                                                 <img src="./src/productos/Zarzamora.png" class="p-img-front" alt="">
                                             </a>
                                         </div>
-                                    </div>
-                                    <!--* Texto de la card -->
-                                    <div class="p-box-text">
+                                    </div> -->
+            <!-- <div class="p-box-text">
                                         <div class="product-category">
                                             <span>Zarzamora</span>
                                         </div>
+                                        <br>
                                         <a href="#" class="product-title">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, assumenda
-                                            veritatis reiciendis magni nihil, voluptatibus laudantium facilis sequi
-                                            recusandae praesentium commodi nulla ab consequuntur! Iste dolorum eum
-                                            quidem ab quasi?
+                                            <hr style="width: 150px;">
                                         </a>
-                                        <br><br>
+                                        <br>
                                         <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
                                             class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
                                             class="ti ti-star"></i>
@@ -154,19 +158,16 @@
                                                 <img src="./src/productos/Frutos_Rojos.png" class="p-img-front" alt="">
                                             </a>
                                         </div>
-                                    </div>
-                                    <!--* Texto de la card -->
-                                    <div class="p-box-text">
+                                    </div> -->
+            <!-- <div class="p-box-text">
                                         <div class="product-category">
                                             <span>Frutos Rojos</span>
                                         </div>
+                                        <br>
                                         <a href="#" class="product-title">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium,
-                                            eveniet. Veniam quibusdam impedit magnam tenetur, corporis expedita qui.
-                                            Ipsam quaerat nesciunt consequuntur vel, labore non reiciendis itaque ab
-                                            repellat rerum?
+                                            <hr style="width: 150px;">
                                         </a>
-                                        <br><br>
+                                        <br>
                                         <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
                                             class="ti ti-star-filled"></i><i class="ti ti-star"></i><i
                                             class="ti ti-star"></i>
@@ -183,19 +184,16 @@
                                                 <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
                                             </a>
                                         </div>
-                                    </div>
-                                    <!--* Texto de la card -->
-                                    <div class="p-box-text">
+                                    </div> -->
+            <!-- <div class="p-box-text">
                                         <div class="product-category">
-                                            <span>Fresas y Frambuesas</span>
+                                            <span>Arándanos</span>
                                         </div>
+                                        <br>
                                         <a href="#" class="product-title">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis
-                                            recusandae dignissimos hic, repellat itaque consequatur, vel minus
-                                            perspiciatis sequi corrupti dolor maxime quisquam earum dolore vitae?
-                                            Perspiciatis, at harum.
+                                            <hr style="width: 150px;">
                                         </a>
-                                        <br><br>
+                                        <br>
                                         <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
                                             class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
                                             class="ti ti-star-filled"></i>
@@ -209,11 +207,11 @@
                         </ul>
                     </div>
                 </div>
-            </section>
-        </section>
-        <!--? Slider de Productos -->
-        <h2 class="mas-vendidos" style="margin-top: 50px; margin-left: 30px;">Nuestros Productos</h2>
-        <section class="p-slider">
+            </section> -->
+            <!-- </section> -->
+            <!--? Slider de Productos -->
+            <!-- <h2 class="mas-vendidos" style="margin-top: 50px; margin-left: 30px;">Nuestros Productos</h2> -->
+            <!-- <section class="p-slider">
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
@@ -228,14 +226,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
-                                <div class="p-box-text">
+                                <!-- <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Arándanos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -251,15 +250,16 @@
                                             <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
                                         </a>
                                     </div>
-                                </div>
-                                <!--* Texto de la card -->
-                                <div class="p-box-text">
+                                </div> -->
+            <!-- <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Arándanos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -275,22 +275,23 @@
                                             <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
                                         </a>
                                     </div>
-                                </div>
-                                <!--* Texto de la card -->
-                                <div class="p-box-text">
+                                </div> -->
+            <!-- <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Arándanos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
+                                </div> -->
+            <!-- </div> -->
+            <!-- <div class="product-box">
                                 <p class="p-discount"> -20%</p>
                                 <br><br><br>
                                 <div class="p-img-container">
@@ -300,21 +301,22 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Arándanos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-box">
+                            </div> -->
+            <!-- <div class="product-box">
                                 <p class="p-discount"> -20%</p>
                                 <br><br><br>
                                 <div class="p-img-container">
@@ -324,21 +326,22 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Arándanos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </div> -->
+            <!-- </li>
                         <li style="display: flex; align-items: center;" class="glide__slide">
                             <div class="product-box">
                                 <p class="p-discount"> -20%</p>
@@ -350,14 +353,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -374,14 +378,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -398,14 +403,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -422,14 +428,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -446,14 +453,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -472,14 +480,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -496,14 +505,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -520,14 +530,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -544,14 +555,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -568,14 +580,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
-                                        Fruto de un grupo de arbustos enanos.
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -586,8 +599,8 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <section class="p-slider">
+        </section> -->
+            <!-- <section class="p-slider">
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul style="margin-left: 50px;" class="glide__slides">
@@ -600,13 +613,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Zarzamora</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -621,13 +636,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Frutos Rojos</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -643,13 +660,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresas y Frambuesas</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -664,13 +683,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <!--* Texto de la card -->
                                 <div class="p-box-text">
                                     <div class="product-category">
                                         <span>Fresa y Zarzamora</span>
                                     </div>
+                                    <br>
                                     <a href="#" class="product-title">
+                                        <hr style="width: 150px;">
                                     </a>
+                                    <br>
                                     <div class="price-buy">
                                         <p class="p-price">$18.⁰⁰</p>
                                         <button class="btn1" onclick="shopping()">Añadir al carrito</button>
@@ -681,109 +702,121 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        <!--Todo: Seccion Socios -->
-        <section id="contactanos">
-            <div>
-                <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
-                <div class="contenedor">
-                    <button class="btn1" onclick="modal()">Contactános</button>
-                </div>
-            </div>
-            <div class="socios">
-                <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
-                <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
-                <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
-            </div>
-        </section>
-        <br><br>
-        <!--Todo: Seccion Nosotros -->
-        <section>
-            <div class="nosotros">
-                <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
-                <div class="nosotros-texto">
-                    <h3 id="nosotros">Nosotros</h3>
-                    <p>Somos una empresa dedicada a la elaboracion de snacks de frutos rojos deshidratados de forma
-                        natural, para cuidar la alimentacion de nuestros clientes, asi mismo, garantizar el cuidado del
-                        medio ambiente con el mismo, ya que se puede realizar, ademas que satisfacemos el antojo de un
-                        snak principalmente de las personas que desean cuidar su salud sustituyendo los snaks chatarra.
-                    </p>
-                    <p>Se puede considerar una pequeña empresa debido a uestra capacidad de producció, a nuestro
-                        limitado alcance y que debido a lo que produciomos, nos limitamos en llegar a mas clientes o
-                        explorar nuevos posibles mercados.</p>
-                    <br>
-                    <div class="mision-vision">
-                        <div>
-                            <h2>Misión</h2>
-                            <p>Nuestra misión es ser una empresa lider en productos de consumo de manera nacional e
-                                internacional, centrada en la produccion de alimentos convenientes y ofrecer a los
-                                consumidores los mejores snaks con sensaciones innovadoras, de calidad 100% naturales.
-                            </p>
-                        </div>
-                        <div>
-                            <h2>Visión</h2>
-                            <p>La vision de <a style="color: red; font-weight: 500;">Snaktural</a> se encamina a la
-                                inclusion y el cuidado
-                                de sus
-                                clientes como sus trabajadores y accionistas, impulsada por su medio, su espiritu de
-                                competencia en el mercado, asi mismo garantizar el cuidado del medio ambiente, buscando
-                                formar parte del mercado competitivo y destacar como la mejor compañia.</p>
-                        </div>
-                    </div>
-                    <footer class="footer-nosotros">
-                        <div class="filed">
-                            <a style="color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
-                            <a style="color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
-                            <a style="color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
-                        </div>
-                    </footer>
-                </div>
-            </div>
-        </section>
-        <!--Todo: Seccion de Preguntas -->
-        <section id="FAQs">
-            <div class="preguntas">
-                <h1 class="ayuda">¿Cómo Podemos Ayudarte?</h1>
-                <br>
-                <div class="group-button">
-                    <input class="questions" type="text" placeholder="Preguntános" />
-                    <div>
-                        <button class="btn3" type="submit" onclick="respuesta()">Enviar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br><br>
-        <!--Todo: Footer -->
-        <footer id="social" class="top">
-            <h1 class="titulo-footer">Snacktural</h1>
-            <div class="links">
-                <div>
-                    <h2>Plataform</h2>
-                    <a href="#">Inicio</a>
-                    <a href="#nosotros">Nosotros</a>
-                </div>
-                <div>
-                    <h2>Cloud</h2>
-                    <a href="#promociones">Promociones</a>
-                    <a href="#contacto">Contacto</a>
-                </div>
-            </div>
-        </footer>
-        <footer class="bottom">
-            <div class="legal">
-                <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
-            </div>
-            <div class="links">
-                <a style="font-size: 20px; color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
-                <a style="font-size: 20px; color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
-                <a style="font-size: 20px; color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
-            </div>
-        </footer>
-    </main>
-</body>
+        </section> -->
+            <!--! FINAL: Error en la seccion -->
 
-<script>new Glide('.glide').mount()</script>
+            <!--Todo: Seccion Socios -->
+            <section id="contactanos">
+                <div>
+                    <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
+                    <div class="contenedor">
+                        <button class="btn1" onclick="modal()">Contactános</button>
+                    </div>
+                </div>
+                <div class="socios">
+                    <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
+                    <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
+                    <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
+                </div>
+            </section>
+            <br><br>
+            <!--Todo: Seccion Nosotros -->
+            <section>
+                <div class="nosotros">
+                    <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
+                    <div class="nosotros-texto">
+                        <h3 id="nosotros">Nosotros</h3>
+                        <p>Somos una empresa dedicada a la elaboracion de snacks de frutos rojos deshidratados de forma
+                            natural, para cuidar la alimentacion de nuestros clientes, asi mismo, garantizar el cuidado
+                            del
+                            medio ambiente con el mismo, ya que se puede realizar, ademas que satisfacemos el antojo de
+                            un
+                            snak principalmente de las personas que desean cuidar su salud sustituyendo los snaks
+                            chatarra.
+                        </p>
+                        <p>Se puede considerar una pequeña empresa debido a uestra capacidad de producció, a nuestro
+                            limitado alcance y que debido a lo que produciomos, nos limitamos en llegar a mas clientes o
+                            explorar nuevos posibles mercados.</p>
+                        <br>
+                        <div class="mision-vision">
+                            <div>
+                                <h2>Misión</h2>
+                                <p>Nuestra misión es ser una empresa lider en productos de consumo de manera nacional e
+                                    internacional, centrada en la produccion de alimentos convenientes y ofrecer a los
+                                    consumidores los mejores snaks con sensaciones innovadoras, de calidad 100%
+                                    naturales.
+                                </p>
+                            </div>
+                            <div>
+                                <h2>Visión</h2>
+                                <p>La vision de <a style="color: red; font-weight: 500;">Snaktural</a> se encamina a la
+                                    inclusion y el cuidado
+                                    de sus
+                                    clientes como sus trabajadores y accionistas, impulsada por su medio, su espiritu de
+                                    competencia en el mercado, asi mismo garantizar el cuidado del medio ambiente,
+                                    buscando
+                                    formar parte del mercado competitivo y destacar como la mejor compañia.</p>
+                            </div>
+                        </div>
+                        <footer class="footer-nosotros">
+                            <div class="filed">
+                                <a style="color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
+                                <a style="color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                                <a style="color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+            <!--Todo: Seccion de Preguntas -->
+            <section id="FAQs">
+                <div class="preguntas">
+                    <h1 class="ayuda">¿Cómo Podemos Ayudarte?</h1>
+                    <br>
+                    <div class="group-button">
+                        <input class="questions" type="text" placeholder="Preguntános" />
+                        <div>
+                            <button class="btn3" type="submit" onclick="respuesta()">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <!--Todo: Footer -->
+            <footer id="social" class="top">
+                <h1 class="titulo-footer">Snacktural</h1>
+                <div class="links">
+                    <div>
+                        <h2>Plataform</h2>
+                        <a href="#">Inicio</a>
+                        <a href="#nosotros">Nosotros</a>
+                    </div>
+                    <div>
+                        <h2>Cloud</h2>
+                        <a href="#promociones">Promociones</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </div>
+            </footer>
+            <footer class="bottom">
+                <div class="legal">
+                    <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
+                </div>
+                <div class="links">
+                    <a style="font-size: 20px; color: #3b5998; cursor: pointer;"
+                        class="ti ti-brand-facebook-filled"></a>
+                    <a style="font-size: 20px; color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                    <a style="font-size: 20px; color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+                </div>
+            </footer>
+    </main>
+
+    <script src="./Js/carrito.js"></script>
+    <script src="./Js/productos.js"></script>
+    <script src="./Js/car-shopping.js"></script>
+    <!-- <script>new Glide('.glide').mount()</script> -->
+
+</body>
 
 </html>

@@ -10,8 +10,8 @@ function modal() {
         hideClass: {
             popup: 'animate__animated animate__backOutDown'
         },
-    })
-}
+    });
+};
 
 function shopping() {
     Swal.fire({
@@ -20,8 +20,8 @@ function shopping() {
         title: 'Agregado al Carrito',
         showConfirmButton: false,
         timer: 1000
-    })
-}
+    });
+};
 
 function respuesta() {
     Swal.fire({
@@ -30,8 +30,8 @@ function respuesta() {
         title: 'Mensaje Enviado',
         showConfirmButton: false,
         timer: 1000
-    })
-}
+    });
+};
 
 function login() {
     Swal.fire({
@@ -48,5 +48,5 @@ function login() {
             }
             return { login: login, password: password }
         }
-    })
-}
+    });
+};
