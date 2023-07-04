@@ -13,16 +13,6 @@ function modal() {
     });
 };
 
-function shopping() {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Agregado al Carrito',
-        showConfirmButton: false,
-        timer: 1000
-    });
-};
-
 function respuesta() {
     Swal.fire({
         position: 'center',

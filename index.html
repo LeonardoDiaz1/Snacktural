@@ -7,28 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--? Importar Css -->
     <link rel="stylesheet" href="./Css/index.css">
-    <!--? Importar Js -->
+    <!--? Importar SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./Js/Alert.js"></script>
-    <!--? Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <!--? Importar Icono -->
+    <!--? Importar Iconos -->
     <link rel="shortcut icon" href="./src/strawberry_logo.svg" type="image/x-icon">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <!--? Importar Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <!--? Importar Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <!--? Importar Animacion -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!--? Importar Glider Js -->
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <!--* Required Core Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <!--* Optional Theme Stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <title>Snaktural</title>
 </head>
 
@@ -36,7 +26,7 @@
     <!--Todo: Barra de Navegación -->
     <header class="page-header">
         <nav>
-            <div class="trigger-menu-wrapper">
+            <div class="trigger-menu-wrapper" id="navbar">
                 <span style="margin-left: 15px;" class="spn-titulo">Snacktural</span>
                 <div class="menu-list">
                     <ul>
@@ -117,705 +107,116 @@
             <h3 class="product-title" style="color: var(--main-color-text);">Nuestros Productos</h3>
             <!--? Productos Js Funcionales -->
             <div id="shopContent" class="shop-content"></div>
-
-            <!--! INICIO: Error en la seccion -->
-            <!-- <section> -->
-            <!-- <div>
-                    <h3 style="margin-top: 80px;" class="mas-vendidos">Los Más Vendidos!</h3>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul style="margin-left: 240px;" class="glide__slides">
-                            <li style="display: flex;" class="glide__slide">
-                                <div class="product-box">
-                                    <div class="p-img-container">
-                                        <div class="p-img">
-                                            <a href="#">
-                                                <img src="./src/productos/Zarzamora.png" class="p-img-front" alt="">
-                                            </a>
-                                        </div>
-                                    </div> -->
-            <!-- <div class="p-box-text">
-                                        <div class="product-category">
-                                            <span>Zarzamora</span>
-                                        </div>
-                                        <br>
-                                        <a href="#" class="product-title">
-                                            <hr style="width: 150px;">
-                                        </a>
-                                        <br>
-                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
-                                            class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
-                                            class="ti ti-star"></i>
-                                        <div class="price-buy">
-                                            <p class="p-price">$18.⁰⁰</p>
-                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-box">
-                                    <div class="p-img-container">
-                                        <div class="p-img">
-                                            <a href="#">
-                                                <img src="./src/productos/Frutos_Rojos.png" class="p-img-front" alt="">
-                                            </a>
-                                        </div>
-                                    </div> -->
-            <!-- <div class="p-box-text">
-                                        <div class="product-category">
-                                            <span>Frutos Rojos</span>
-                                        </div>
-                                        <br>
-                                        <a href="#" class="product-title">
-                                            <hr style="width: 150px;">
-                                        </a>
-                                        <br>
-                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
-                                            class="ti ti-star-filled"></i><i class="ti ti-star"></i><i
-                                            class="ti ti-star"></i>
-                                        <div class="price-buy">
-                                            <p class="p-price">$18.⁰⁰</p>
-                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-box">
-                                    <div class="p-img-container">
-                                        <div class="p-img">
-                                            <a href="#">
-                                                <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                            </a>
-                                        </div>
-                                    </div> -->
-            <!-- <div class="p-box-text">
-                                        <div class="product-category">
-                                            <span>Arándanos</span>
-                                        </div>
-                                        <br>
-                                        <a href="#" class="product-title">
-                                            <hr style="width: 150px;">
-                                        </a>
-                                        <br>
-                                        <i class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
-                                            class="ti ti-star-filled"></i><i class="ti ti-star-filled"></i><i
-                                            class="ti ti-star-filled"></i>
-                                        <div class="price-buy">
-                                            <p class="p-price">$18.⁰⁰</p>
-                                            <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section> -->
-            <!-- </section> -->
-            <!--? Slider de Productos -->
-            <!-- <h2 class="mas-vendidos" style="margin-top: 50px; margin-left: 30px;">Nuestros Productos</h2> -->
-            <!-- <section class="p-slider">
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides">
-                        <li style="display: flex;" class="glide__slide">
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Arándanos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div> -->
-            <!-- <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Arándanos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div> -->
-            <!-- <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Arándanos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div> -->
-            <!-- </div> -->
-            <!-- <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Arándanos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div> -->
-            <!-- <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Arandanos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Arándanos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div> -->
-            <!-- </li>
-                        <li style="display: flex; align-items: center;" class="glide__slide">
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frambuesas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li style="display: flex;" class="glide__slide">
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <p class="p-discount"> -20%</p>
-                                <br><br><br>
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+        </section>
+        <!--Todo: Seccion Socios -->
+        <section id="contactanos">
+            <div>
+                <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
+                <div class="contenedor">
+                    <button class="btn1" onclick="modal()">Contactános</button>
                 </div>
             </div>
-        </section> -->
-            <!-- <section class="p-slider">
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul style="margin-left: 50px;" class="glide__slides">
-                        <li style="display: flex;" class="glide__slide">
-                            <div class="product-box">
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Zarzamora.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Zarzamora</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Frutos_Rojos.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Frutos Rojos</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresas_y_Frambuesas.png" class="p-img-front"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresas y Frambuesas</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-box">
-                                <div class="p-img-container">
-                                    <div class="p-img">
-                                        <a href="#">
-                                            <img src="./src/productos/Fresa_y_Zarzamora.png" class="p-img-front" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="p-box-text">
-                                    <div class="product-category">
-                                        <span>Fresa y Zarzamora</span>
-                                    </div>
-                                    <br>
-                                    <a href="#" class="product-title">
-                                        <hr style="width: 150px;">
-                                    </a>
-                                    <br>
-                                    <div class="price-buy">
-                                        <p class="p-price">$18.⁰⁰</p>
-                                        <button class="btn1" onclick="shopping()">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="socios">
+                <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
+                <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
+                <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
             </div>
-        </section> -->
-            <!--! FINAL: Error en la seccion -->
-
-            <!--Todo: Seccion Socios -->
-            <section id="contactanos">
-                <div>
-                    <h2 class="titulo-socios">¿Quieres Vender Nuestros Productos?</h2>
-                    <div class="contenedor">
-                        <button class="btn1" onclick="modal()">Contactános</button>
-                    </div>
-                </div>
-                <div class="socios">
-                    <img src="https://edicom.mx/dam/jcr:56ae5073-20b3-4425-af23-143d550a8986/walmart_integration.png" />
-                    <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
-                    <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
-                </div>
-            </section>
-            <br><br>
-            <!--Todo: Seccion Nosotros -->
-            <section>
-                <div class="nosotros">
-                    <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
-                    <div class="nosotros-texto">
-                        <h3 id="nosotros">Nosotros</h3>
-                        <p>Somos una empresa dedicada a la elaboracion de snacks de frutos rojos deshidratados de forma
-                            natural, para cuidar la alimentacion de nuestros clientes, asi mismo, garantizar el cuidado
-                            del
-                            medio ambiente con el mismo, ya que se puede realizar, ademas que satisfacemos el antojo de
-                            un
-                            snak principalmente de las personas que desean cuidar su salud sustituyendo los snaks
-                            chatarra.
-                        </p>
-                        <p>Se puede considerar una pequeña empresa debido a uestra capacidad de producció, a nuestro
-                            limitado alcance y que debido a lo que produciomos, nos limitamos en llegar a mas clientes o
-                            explorar nuevos posibles mercados.</p>
-                        <br>
-                        <div class="mision-vision">
-                            <div>
-                                <h2>Misión</h2>
-                                <p>Nuestra misión es ser una empresa lider en productos de consumo de manera nacional e
-                                    internacional, centrada en la produccion de alimentos convenientes y ofrecer a los
-                                    consumidores los mejores snaks con sensaciones innovadoras, de calidad 100%
-                                    naturales.
-                                </p>
-                            </div>
-                            <div>
-                                <h2>Visión</h2>
-                                <p>La vision de <a style="color: red; font-weight: 500;">Snaktural</a> se encamina a la
-                                    inclusion y el cuidado
-                                    de sus
-                                    clientes como sus trabajadores y accionistas, impulsada por su medio, su espiritu de
-                                    competencia en el mercado, asi mismo garantizar el cuidado del medio ambiente,
-                                    buscando
-                                    formar parte del mercado competitivo y destacar como la mejor compañia.</p>
-                            </div>
-                        </div>
-                        <footer class="footer-nosotros">
-                            <div class="filed">
-                                <a style="color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
-                                <a style="color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
-                                <a style="color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
-                            </div>
-                        </footer>
-                    </div>
-                </div>
-            </section>
-            <!--Todo: Seccion de Preguntas -->
-            <section id="FAQs">
-                <div class="preguntas">
-                    <h1 class="ayuda">¿Cómo Podemos Ayudarte?</h1>
+        </section>
+        <br><br>
+        <!--Todo: Seccion Nosotros -->
+        <section>
+            <div class="nosotros">
+                <img src="https://conquer.ar/wp-content/uploads/2020/10/3-Nosotros.png" />
+                <div class="nosotros-texto">
+                    <h3 id="nosotros">Nosotros</h3>
+                    <p>Somos una empresa dedicada a la elaboracion de snacks de frutos rojos deshidratados de forma
+                        natural, para cuidar la alimentacion de nuestros clientes, asi mismo, garantizar el cuidado
+                        del
+                        medio ambiente con el mismo, ya que se puede realizar, ademas que satisfacemos el antojo de
+                        un
+                        snak principalmente de las personas que desean cuidar su salud sustituyendo los snaks
+                        chatarra.
+                    </p>
+                    <p>Se puede considerar una pequeña empresa debido a uestra capacidad de producció, a nuestro
+                        limitado alcance y que debido a lo que produciomos, nos limitamos en llegar a mas clientes o
+                        explorar nuevos posibles mercados.</p>
                     <br>
-                    <div class="group-button">
-                        <input class="questions" type="text" placeholder="Preguntános" />
+                    <div class="mision-vision">
                         <div>
-                            <button class="btn3" type="submit" onclick="respuesta()">Enviar</button>
+                            <h2>Misión</h2>
+                            <p>Nuestra misión es ser una empresa lider en productos de consumo de manera nacional e
+                                internacional, centrada en la produccion de alimentos convenientes y ofrecer a los
+                                consumidores los mejores snaks con sensaciones innovadoras, de calidad 100%
+                                naturales.
+                            </p>
+                        </div>
+                        <div>
+                            <h2>Visión</h2>
+                            <p>La vision de <a style="color: red; font-weight: 500;">Snaktural</a> se encamina a la
+                                inclusion y el cuidado
+                                de sus
+                                clientes como sus trabajadores y accionistas, impulsada por su medio, su espiritu de
+                                competencia en el mercado, asi mismo garantizar el cuidado del medio ambiente,
+                                buscando
+                                formar parte del mercado competitivo y destacar como la mejor compañia.</p>
                         </div>
                     </div>
+                    <footer class="footer-nosotros">
+                        <div class="filed">
+                            <a style="color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
+                            <a style="color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                            <a style="color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+                        </div>
+                    </footer>
                 </div>
-            </section>
-            <br><br>
-            <!--Todo: Footer -->
-            <footer id="social" class="top">
-                <h1 class="titulo-footer">Snacktural</h1>
-                <div class="links">
+            </div>
+        </section>
+        <!--Todo: Seccion de Preguntas -->
+        <section id="FAQs">
+            <div class="preguntas">
+                <h1 class="ayuda">¿Cómo Podemos Ayudarte?</h1>
+                <br>
+                <div class="group-button">
+                    <input class="questions" type="text" placeholder="Preguntános" />
                     <div>
-                        <h2>Plataform</h2>
-                        <a href="#">Inicio</a>
-                        <a href="#nosotros">Nosotros</a>
-                    </div>
-                    <div>
-                        <h2>Cloud</h2>
-                        <a href="#promociones">Promociones</a>
-                        <a href="#contacto">Contacto</a>
+                        <button class="btn3" type="submit" onclick="respuesta()">Enviar</button>
                     </div>
                 </div>
-            </footer>
-            <footer class="bottom">
-                <div class="legal">
-                    <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
+            </div>
+        </section>
+        <br><br>
+        <!--Todo: Footer -->
+        <footer id="social" class="top">
+            <h1 class="titulo-footer">Snacktural</h1>
+            <div class="links">
+                <div>
+                    <h2>Plataform</h2>
+                    <a href="#">Inicio</a>
+                    <a href="#nosotros">Nosotros</a>
                 </div>
-                <div class="links">
-                    <a style="font-size: 20px; color: #3b5998; cursor: pointer;"
-                        class="ti ti-brand-facebook-filled"></a>
-                    <a style="font-size: 20px; color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
-                    <a style="font-size: 20px; color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+                <div>
+                    <h2>Cloud</h2>
+                    <a href="#promociones">Promociones</a>
+                    <a href="#contacto">Contacto</a>
                 </div>
-            </footer>
+            </div>
+        </footer>
+        <footer class="bottom">
+            <div class="legal">
+                <span>CRUD2 &copy; 2023 - Derechos Reservados</span>
+            </div>
+            <div class="links">
+                <a style="font-size: 20px; color: #3b5998; cursor: pointer;" class="ti ti-brand-facebook-filled"></a>
+                <a style="font-size: 20px; color: #171515; cursor: pointer;" class="ti ti-brand-github-filled"></a>
+                <a style="font-size: 20px; color: #00acee; cursor: pointer;" class="ti ti-brand-twitter-filled"></a>
+            </div>
+        </footer>
     </main>
 
     <script src="./Js/carrito.js"></script>
-    <script src="./Js/productos.js"></script>
     <script src="./Js/car-shopping.js"></script>
-    <!-- <script>new Glide('.glide').mount()</script> -->
+    <script src="./Js/Alert.js"></script>
 
 </body>
 

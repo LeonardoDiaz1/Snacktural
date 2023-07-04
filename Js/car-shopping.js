@@ -29,6 +29,25 @@ const getProducts = async () => {
         comprar.addEventListener("click", () => {
             const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
 
+            if (comprar = "click") {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 800,
+                    timerProgressBar: false,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                });
+
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Añadido al Carrito'
+                });
+            };
+
             if (repeat) {
                 carrito.map((prod) => {
                     if (prod.id === product.id) {
@@ -44,6 +63,7 @@ const getProducts = async () => {
                     cantidad: product.cantidad,
                 });
             };
+
             carritoCounter();
             saveLocal();
         });
