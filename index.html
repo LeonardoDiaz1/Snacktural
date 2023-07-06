@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./Css/index.css">
     <!--? Importar SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./Js/Alert.js"></script>
     <!--? Importar Iconos -->
     <link rel="shortcut icon" href="./src/strawberry_logo.svg" type="image/x-icon">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -40,16 +41,27 @@
                 </div>
                 <div class="items">
                     <span class="ti ti-user-circle" onclick="login()"></span>
-                    <span style="margin-left: 10px;" class="ti ti-shopping-bag" id="verCarrito"></span>
+                    <span style="margin-left: 10px;" class="ti ti-shopping-cart" id="verCarrito"></span>
                     <span id="cantidadCarrito" class="cantidad-Carrito"></span>
                 </div>
             </div>
         </nav>
     </header>
+
+    <head class="header-mobile">
+        <!--? Header Mobile -->
+        <nav class="nav-mobile">
+            <div class="lista-menu-mobile">
+                <span class="span-mobile">Snacktural</span>
+                <span class="ti ti-menu-2" id="menu2"></span>
+            </div>
+        </nav>
+    </head>
     <main>
         <!--Todo: Sección principal del Inicio -->
         <section>
             <div class="index"></div>
+            <div class="index-mobile"></div>
             <div class="h">
                 <h2 class="titulo-h">COME BIEN, LUCE BIEN!</h2>
                 <div class="syo">
@@ -94,7 +106,19 @@
                         </div>
                     </div>
                 </div>
-                <br><br>
+            </div>
+            <!--? Promo Mobile -->
+            <div class="promo-mobile">
+                <h3 class="promo-title-mobile">PROMO JUNIO: 3x2 EN SNACK'S DE FRUTOS ROJOS</h3>
+                <div class="promo-img-mobile">
+                    <img
+                        src="https://statics-cuidateplus.marca.com/cms/styles/ratio_1_1/azblob/pina.jpg.webp?itok=OEYSTAHf" />
+                    <hr style="width: 250px;">
+                    <div class="precio-mobile">
+                        <p style="text-decoration-line: line-through;">ANTES $60.⁰⁰</p>
+                        <p>AHORA $36.⁰⁰</p>
+                    </div>
+                </div>
             </div>
         </section>
         <!--Todo: Catálogo de Productos -->
@@ -105,6 +129,9 @@
                 <h1 id="productos" class="titulo-card">Catálogo de Productos</h1>
             </div>
             <h3 class="product-title" style="color: var(--main-color-text);">Nuestros Productos</h3>
+            <div>
+                <input type="text" name="" id="" class="search" placeholder="Busca entre nuestro productos">
+            </div>
             <!--? Productos Js Funcionales -->
             <div id="shopContent" class="shop-content"></div>
         </section>
@@ -121,6 +148,8 @@
                 <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/sams-club-2-logo.png" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Aurrera_logo.svg" />
                 <img src="https://i.pinimg.com/originals/2f/03/15/2f031536c914d18700f97707d3a9c85e.png" />
+                <img class="socios-img"
+                    src="https://www.facturaticket.mx/wp-content/uploads/2017/09/SUPER-KOMPRAS-FACTURACION-LOGO-H.png" />
             </div>
         </section>
         <br><br>
@@ -216,7 +245,6 @@
 
     <script src="./Js/carrito.js"></script>
     <script src="./Js/car-shopping.js"></script>
-    <script src="./Js/Alert.js"></script>
 
 </body>
 

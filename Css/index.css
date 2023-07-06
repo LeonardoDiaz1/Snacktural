@@ -51,6 +51,43 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: space-between;
 }
 
+.header-mobile {
+    display: none;
+}
+
+@media (width < 420px) {
+    .page-header {
+        display: none;
+    }
+
+    .lista-menu-mobile {
+        display: flex;
+        background-color: #6d2c7d;
+        background: rgb(36, 0, 9);
+        background: linear-gradient(90deg, rgba(36, 0, 9, 1) 6%, rgba(149, 7, 7, 1) 30%, rgba(255, 0, 0, 1) 92%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .span-mobile {
+        color: #ffffff;
+        font-family: var(--main-font), sans-serif;
+        font-size: 2rem;
+    }
+
+    #menu2 {
+        font-size: 2rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
+
 .trigger-menu-wrapper {
     position: fixed;
     top: 0;
@@ -293,10 +330,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 /*Todo: Seccion de la imagen */
 .index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     flex-direction: column;
     height: 80vh;
     background-image: url("../src/img/LOGO.jpeg");
@@ -305,7 +338,6 @@ body::-webkit-scrollbar-thumb:hover {
     background-position: center center;
     margin-top: 100px;
     object-fit: contain;
-    background-color: white;
 }
 
 .h {
@@ -372,6 +404,38 @@ main section div ul li {
 
 .sellos {
     margin-left: 15rem;
+}
+
+@media (width < 420px) {
+    .h {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .titulo-h {
+        text-align: center;
+    }
+
+    .h img {
+        justify-content: center;
+    }
+
+    .syo {
+        display: none;
+        text-align: center;
+    }
+
+    .index {
+        display: none;
+    }
+
+    .index-mobile {
+        flex-direction: column;
+        height: 80vh;
+        background-image: url("../src/img/LOGO.jpeg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 /*Todo: Seccion de Promociones */
@@ -489,6 +553,61 @@ main section div ul li {
     color: var(--main-color-text);
 }
 
+.promo-mobile {
+    display: none;
+}
+
+@media (width < 420px) {
+    .hashtag {
+        display: block;
+    }
+
+    .spn {
+        display: none;
+    }
+
+    .super-promo {
+        display: none;
+    }
+
+    .promo-mobile {
+        display: block;
+        border: 1px solid #3a4f6a;
+        margin: 15px;
+        border-radius: 10px;
+    }
+
+    .promo-title-mobile {
+        font-family: var(--titulos), sans-serif;
+        color: var(--main-color-text);
+        font-size: 1rem;
+    }
+
+    .promo-img-mobile {
+        border: 1px solid red;
+        border-radius: 5px;
+        margin: 15px;
+    }
+
+    .promo-img-mobile img {
+        object-fit: cover;
+        width: 300px;
+        margin: 10px;
+    }
+
+    .precio-mobile {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .precio-mobile p {
+        font-family: var(--texto-font), sans-serif;
+        font-weight: 700;
+    }
+}
+
 /*Todo: Sección Catalogo de Productos */
 .titulo-card {
     font-family: var(--main-font), sans-serif;
@@ -536,113 +655,32 @@ main section div ul li {
     color: black;
 }
 
-/*? Slider de productos */
-.p-slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0px;
+.search {
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 40px;
+    border-radius: 7px;
+    padding-left: 20px;
+    font-size: 1rem;
+    font-family: var(--texto-font), sans-serif;
+    border: none;
 }
 
-.product-box {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 15px;
-    border: rgb(222, 220, 220) 2px solid;
-    border-radius: 10px;
-    margin: 0 20px;
-    transition: scale 0.2 ease;
-    position: relative;
-    background-color: white;
-}
+/*? Responsive Catalogo de Productos */
+@media (width < 420px) {
+    .titulo-card {
+        font-size: 2rem;
+    }
 
-.product-box:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    scale: 1.05;
-}
+    .product-title {
+        font-size: 1rem;
+        text-align: center;
+    }
 
-.p-img-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.p-img a,
-.p-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.p-img a img {
-    width: 100%;
-    height: 300px;
-    object-position: center;
-    object-fit: contain;
-}
-
-.p-box-text {
-    margin-top: 5px;
-    width: 100%;
-}
-
-.product-category {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.product-category span {
-    color: #acacac;
-    font-size: 0.9rem;
-    margin: 5px 0px;
-}
-
-.product-title {
-    color: #333333;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all ease 0.3s;
-}
-
-.product-title:hover {
-    color: #111111;
-    opacity: 0.7;
-    transition: all ease 0.3s;
-}
-
-.price-buy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.price-buy .p-price {
-    font-size: 1.3rem;
-    color: #333333;
-    font-weight: 700;
-}
-
-.p-discount {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 65px;
-    height: 24px;
-    color: #ffffff;
-    background-color: var(--main-color-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    z-index: 100;
-    border-radius: 3px;
+    .search {
+        margin-top: 20px;
+        width: 300px;
+    }
 }
 
 /*Todo: Seccion Socios */
@@ -667,6 +705,31 @@ main section div ul li {
     width: 500px;
     height: 200px;
     object-fit: cover;
+}
+
+.socios-img {
+    display: none;
+}
+
+.titulo-modal {
+    color: var(--main-color-text);
+    font-family: var(--main-font), sans-serif;
+}
+
+/*? Responsive Socios */
+@media (width < 420px) {
+    .titulo-socios {
+        font-size: 1.5rem;
+    }
+
+    .socios .socios-img {
+        display: flex;
+        object-fit: cover;
+    }
+
+    .socios img {
+        display: none;
+    }
 }
 
 /*Todo: Seccion Nosotros */
@@ -735,6 +798,25 @@ main section div ul li {
     font-size: 1.5rem;
 }
 
+/*? Responsive Nosotros */
+@media (width < 420px) {
+    .nosotros {
+        display: block;
+    }
+
+    .nosotros img {
+        display: none;
+    }
+
+    .footer-nosotros {
+        display: none;
+    }
+
+    .mision-vision {
+        display: none;
+    }
+}
+
 /*Todo: Seccion de Preguntas */
 .preguntas {
     display: flex;
@@ -801,6 +883,26 @@ main section div ul li {
 .btn3:active {
     scale: 0.95;
 }
+
+/*? Responsive Questions */
+@media (width < 420px) {
+    .questions {
+        width: 300px;
+    }
+
+    .group-button {
+        display: block;
+    }
+
+    .btn3 {
+        margin-top: 20px;
+    }
+
+    .ayuda {
+        font-size: 2rem;
+    }
+}
+
 
 /*Todo: Seccion Footer */
 footer {
