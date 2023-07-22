@@ -20,6 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <!--? Importar Animacion -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--? JS -->
+    <script src="./Js/head.js"></script>
     <title>Snaktural</title>
 </head>
 
@@ -32,7 +34,7 @@
                 <div class="menu-list">
                     <ul>
                         <li><a class="nav-links" href="#">Inicio</a></li>
-                        <li><a class="nav-links" href="#promociones">Promociones</a></li>
+                        <li><a class="nav-links" href="#promo">Promociones</a></li>
                         <li><a class="nav-links" href="#nosotros">Nosotros</a></li>
                         <li><a class="nav-links" href="#contactanos">Contacto</a></li>
                         <li><a class="nav-links" href="#FAQs">FAQs</a></li>
@@ -53,15 +55,34 @@
         <nav class="nav-mobile">
             <div class="lista-menu-mobile">
                 <span class="span-mobile">Snacktural</span>
-                <span class="ti ti-menu-2" id="menu2"></span>
+                <!-- <span class="ti ti-menu-2" class="menu" onclick="menu()" id="menu2"></span> -->
             </div>
         </nav>
     </head>
+    <!--? Navegacion en lista de los elementos -->
+    <nav class="head-mobile">
+        <div>
+            <ul>
+                <li><a class="navs-links" href="#">Inicio</a></li>
+                <li><a class="navs-links" href="#promo">Promociones</a></li>
+                <li><a class="navs-links" href="#nosotros">Nosotros</a></li>
+                <li><a class="navs-links" href="#contactanos">Contacto</a></li>
+                <li><a class="navs-links" href="#FAQs">FAQs</a></li>
+                <li><a class="navs-links" href="#social">Redes Sociales</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
         <!--Todo: Sección principal del Inicio -->
         <section>
-            <div class="index"></div>
-            <div class="index-mobile"></div>
+            <div class="index">
+                <h1 class="titulo-index">Snacktural</h1>
+                <p class="slogan-index">Come bien, luce bien!</p>
+            </div>
+            <div class="index-mobile">
+                <h1 class="titulo-index">Snacktural</h1>
+                <p class="slogan-index">Come bien, luce bien!</p>
+            </div>
             <div class="h">
                 <h2 class="titulo-h">COME BIEN, LUCE BIEN!</h2>
                 <div class="syo">
@@ -74,7 +95,7 @@
         </section>
         <!--Todo: Sección de Promociones -->
         <section>
-            <div class="hashtag">
+            <div id="promo" class="hashtag">
                 <h2 class="hashtag-1">SUPER PAK'S</h2>
                 <div>
                     <p class="spn">#ATODAHORA <i class="ti ti-clock-hour-10"></i></p>
@@ -82,7 +103,7 @@
                     <p class="spn">#SUPERFOOD <i class="ti ti-mood-wink-2"></i></p>
                 </div>
             </div>
-            <div id="promociones" class="super-promo">
+            <div id="promo" class="super-promo">
                 <div class="cards">
                     <div class="card">
                         <div class="card-body">
@@ -90,7 +111,9 @@
                             <div class="card-margin">
                                 <span class="card-text">Envio Incluido</span>
                             </div>
-                            <img src="./src/productos/Frutos_Rojos.png" width="300px" />
+                            <br>
+                            <img src="https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png"
+                                width="300px" />
                         </div>
                     </div>
                     <div class="card2">
@@ -106,13 +129,14 @@
                         </div>
                     </div>
                 </div>
+                <br><br>
             </div>
             <!--? Promo Mobile -->
-            <div class="promo-mobile">
+            <div id="promo" class="promo-mobile">
                 <h3 class="promo-title-mobile">PROMO JUNIO: 3x2 EN SNACK'S DE FRUTOS ROJOS</h3>
                 <div class="promo-img-mobile">
                     <img
-                        src="https://statics-cuidateplus.marca.com/cms/styles/ratio_1_1/azblob/pina.jpg.webp?itok=OEYSTAHf" />
+                        src="https://images.vexels.com/media/users/3/236732/isolated/preview/3f915546587060434b26f077d5a1a499-frutas-y-verduras-10.png" />
                     <hr style="width: 250px;">
                     <div class="precio-mobile">
                         <p style="text-decoration-line: line-through;">ANTES $60.⁰⁰</p>
@@ -226,8 +250,7 @@
                 </div>
                 <div>
                     <h2>Cloud</h2>
-                    <a href="#promociones">Promociones</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#contactanos">Contacto</a>
                 </div>
             </div>
         </footer>

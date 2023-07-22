@@ -55,6 +55,10 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
+.head-mobile {
+    display: none;
+}
+
 @media (width < 420px) {
     .page-header {
         display: none;
@@ -82,9 +86,32 @@ body::-webkit-scrollbar-thumb:hover {
     }
 
     #menu2 {
+        margin-top: 4px;
         font-size: 2rem;
         color: #ffffff;
         cursor: pointer;
+    }
+
+    .head-mobile {
+        display: block;
+        background: rgb(36, 0, 9);
+        background: linear-gradient(90deg, rgba(36, 0, 9, 1) 6%, rgba(149, 7, 7, 1) 30%, rgba(255, 0, 0, 1) 92%);
+        width: 50%;
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+        height: 100%;
+    }
+
+    .navs-links {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-family: var(--texto-font), sans-serif;
+        font-size: 1.2rem;
+        display: block;
+        border-bottom: 1px solid white;
     }
 }
 
@@ -330,14 +357,33 @@ body::-webkit-scrollbar-thumb:hover {
 
 /*Todo: Seccion de la imagen */
 .index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     flex-direction: column;
-    height: 80vh;
-    background-image: url("../src/img/LOGO.jpeg");
+    height: 90vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2020/02/09/16/24/apple-4833764_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    margin-top: 100px;
+    margin-top: 55px;
     object-fit: contain;
+}
+
+.titulo-index {
+    color: var(--secondary-color);
+    font-family: var(--main-font), sans-serif;
+    font-size: 5rem;
+}
+
+.slogan-index {
+    color: var(--secondary-color);
+    font-family: var(--texto-font), sans-serif;
+    font-size: 2rem;
+    margin-top: 0;
 }
 
 .h {
@@ -406,6 +452,10 @@ main section div ul li {
     margin-left: 15rem;
 }
 
+.index-mobile {
+    display: none;
+}
+
 @media (width < 420px) {
     .h {
         display: block;
@@ -430,11 +480,27 @@ main section div ul li {
     }
 
     .index-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 3rem;
         flex-direction: column;
-        height: 80vh;
-        background-image: url("../src/img/LOGO.jpeg");
+        height: 90vh;
+        background-image: linear-gradient(0deg,
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2020/02/09/16/24/apple-4833764_1280.jpg");
         background-repeat: no-repeat;
+        background-size: cover;
         background-position: center center;
+    }
+
+    .titulo-index {
+        font-size: 3rem;
+    }
+
+    .slogan-index {
+        font-size: 1.5rem;
     }
 }
 
@@ -572,7 +638,7 @@ main section div ul li {
 
     .promo-mobile {
         display: block;
-        border: 1px solid #3a4f6a;
+        border: 1px solid rgb(211, 210, 210);
         margin: 15px;
         border-radius: 10px;
     }
@@ -584,7 +650,7 @@ main section div ul li {
     }
 
     .promo-img-mobile {
-        border: 1px solid red;
+        border: 1px solid rgb(211, 210, 210);
         border-radius: 5px;
         margin: 15px;
     }
@@ -605,6 +671,10 @@ main section div ul li {
     .precio-mobile p {
         font-family: var(--texto-font), sans-serif;
         font-weight: 700;
+    }
+
+    .titulo-h {
+        display: none;
     }
 }
 
