@@ -41,7 +41,6 @@ const getProducts = async () => {
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 });
-
                 Toast.fire({
                     icon: 'success',
                     title: 'Añadido al Carrito'
