@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 12px;
+    border-radius: 14px;
     background: rgba(177, 174, 174, 0.479);
 }
 
@@ -68,7 +68,7 @@ body::-webkit-scrollbar-thumb:hover {
         display: flex;
         background-color: #6d2c7d;
         background: rgb(36, 0, 9);
-        background: linear-gradient(90deg, rgba(36, 0, 9, 1) 6%, rgba(149, 7, 7, 1) 30%, rgba(255, 0, 0, 1) 92%);
+        background: linear-gradient(90deg, rgba(36, 0, 9, 1) 6%, rgb(131, 7, 7) 30%, rgb(217, 10, 10) 92%);
         position: fixed;
         top: 0;
         left: 0;
@@ -510,6 +510,7 @@ main section div ul li {
     margin: 2rem;
     object-fit: fill;
     background-color: white;
+    border-radius: 8px;
 }
 
 .hashtag {
@@ -767,6 +768,7 @@ main section div ul li {
     margin: 1rem;
     display: flex;
     background-color: white;
+    border-radius: 10px;
 }
 
 .socios img {
@@ -805,6 +807,7 @@ main section div ul li {
 /*Todo: Seccion Nosotros */
 .nosotros {
     border: rgb(235, 235, 235) 2px solid;
+    border-radius: 10px;
     display: flex;
     margin: 1rem;
     background-color: white;
@@ -984,7 +987,7 @@ footer {
 }
 
 footer.top {
-    border-bottom: 2px solid #3a4f6a;
+    border-bottom: 2px solid #000000;
     padding-bottom: 20px;
 }
 
