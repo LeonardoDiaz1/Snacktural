@@ -170,9 +170,9 @@ body {
 }
 
 @media (width < 420px) {
-    .regreso a {
-        right: 35px;
-        bottom: 2% !important;
+    .regreso .ti {
+        right: 25px;
+        bottom: 5% !important;
     }
 
     .wrapper i {
