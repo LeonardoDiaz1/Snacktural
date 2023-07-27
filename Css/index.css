@@ -867,7 +867,19 @@ main section div ul li {
     font-size: 20px;
     padding: 10px;
     justify-content: space-between;
-    margin-left: 965px;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 915px;
+    gap: 30px;
+}
+
+.filed .ti {
+    transition: transform 0.3s ease 0s;
+}
+
+.filed .ti:hover {
+    transform: translateY(-10px);
 }
 
 .mision-vision {
@@ -1013,6 +1025,14 @@ footer.top .links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+
+.links .ti {
+    transition: transform 0.3s ease 0s;
+}
+
+.links .ti:hover {
+    transform: translateY(-10px);
 }
 
 footer.top a {
