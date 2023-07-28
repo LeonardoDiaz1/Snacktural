@@ -901,27 +901,36 @@ main section div ul li {
 }
 
 /*? Responsive Nosotros */
-@media (max-width < 420px) {
+@media (width < 420px) {
     .nosotros {
         display: block;
     }
 
     .nosotros img {
         display: none;
+        /* display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        margin-top: 0;
+        margin: auto; */
     }
 
     .footer-nosotros {
-        display: none;
+        display: flex;
+    }
+
+    .filed {
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .mision-vision {
         display: none;
-    }
-}
-
-@media (min-width > 950px) {
-    .nosotros {
-        box-sizing: border-box;
     }
 }
 
