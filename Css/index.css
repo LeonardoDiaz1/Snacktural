@@ -919,6 +919,12 @@ main section div ul li {
     }
 }
 
+@media (width > 950px) {
+    .nosotros {
+        box-sizing: border-box;
+    }
+}
+
 /*Todo: Seccion de Preguntas */
 .faq-heading {
     margin-top: 40px;
