@@ -901,7 +901,7 @@ main section div ul li {
 }
 
 /*? Responsive Nosotros */
-@media (width < 420px) {
+@media (max-width < 420px) {
     .nosotros {
         display: block;
     }
@@ -919,7 +919,7 @@ main section div ul li {
     }
 }
 
-@media (width > 950px) {
+@media (min-width > 950px) {
     .nosotros {
         box-sizing: border-box;
     }
