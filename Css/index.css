@@ -84,13 +84,7 @@ body::-webkit-scrollbar-thumb:hover {
         color: #ffffff;
         font-family: var(--main-font), sans-serif;
         font-size: 2rem;
-    }
-
-    #menu2 {
-        margin-top: 4px;
-        font-size: 2rem;
-        color: #ffffff;
-        cursor: pointer;
+        text-decoration: none;
     }
 
     .head-mobile {
