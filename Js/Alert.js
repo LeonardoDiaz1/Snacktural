@@ -25,7 +25,7 @@ function respuesta() {
 
 function login() {
     Swal.fire({
-        title: 'Inicio de Sesion',
+        title: 'Inicio de Sesión',
         html: `<input type="text" id="login" class="swal2-input" placeholder="Usuario">
         <input type="password" id="password" class="swal2-input" placeholder="Contraseña">`,
         confirmButtonText: 'Ingresar',
