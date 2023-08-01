@@ -1,3 +1,4 @@
+/*Todo: Fuentes  */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Poppins:wght@500&display=swap');
 
@@ -16,9 +17,11 @@ body {
     box-sizing: border-box;
 }
 
+/*Todo: Seccion Wrapper */
 .wrapper {
     max-width: 1100px;
     width: 100%;
+    margin-top: 50px;
 }
 
 .wrapper i {
@@ -65,6 +68,7 @@ body {
     scrollbar-width: 0;
 }
 
+/*Todo: Seccion Carousel */
 .carousel::-webkit-scrollbar {
     display: none;
 }
@@ -100,6 +104,7 @@ body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+/*Todo: Seccion de las Cards */
 .card .img {
     background: rgb(255, 0, 0);
     background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(230, 16, 16, 1) 51%, rgba(98, 19, 19, 1) 84%);
@@ -127,6 +132,7 @@ body {
     font-size: 1.31rem;
 }
 
+/*? Responsive Cards/Division de las Mismas para Distintos Tamaños  */
 @media screen and (max-width: 900px) {
     .wrapper .carousel {
         grid-auto-columns: calc((100% / 2) - 9px);
@@ -139,15 +145,236 @@ body {
     }
 }
 
-.team {
+/*Todo: Titulo */
+.wraper {
     position: absolute;
-    top: 50px;
+    top: 10px;
     color: #fff;
-    font-size: 2rem;
+    font-size: 60px;
     justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    margin: auto;
 }
 
+/*? Glitch Effect del Titulo */
+.wraper h1.glitch {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 800;
+    position: relative;
+    font-size: 100px;
+    padding: 30px;
+}
+
+.wraper h1.glitch::before,
+.wraper h1.glitch::after {
+    padding: 30px;
+    color: white;
+    content: "Equipo";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+}
+
+.wraper h1.glitch::before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation-name: glitch-animation-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+}
+
+.wraper h1.glitch::after {
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation-name: glitch-animation-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse-alternate;
+}
+
+@keyframes glitch-animation-1 {
+    0% {
+        clip: rect(124px, 350px, 83px, 30px);
+    }
+
+    5% {
+        clip: rect(26px, 350px, 146px, 30px);
+    }
+
+    10% {
+        clip: rect(115px, 350px, 69px, 30px);
+    }
+
+    15% {
+        clip: rect(117px, 350px, 109px, 30px);
+    }
+
+    20% {
+        clip: rect(92px, 350px, 106px, 30px);
+    }
+
+    25% {
+        clip: rect(40px, 350px, 8px, 30px);
+    }
+
+    30% {
+        clip: rect(77px, 350px, 36px, 30px);
+    }
+
+    35% {
+        clip: rect(150px, 350px, 126px, 30px);
+    }
+
+    40% {
+        clip: rect(40px, 350px, 40px, 30px);
+    }
+
+    45% {
+        clip: rect(107px, 350px, 150px, 30px);
+    }
+
+    50% {
+        clip: rect(44px, 350px, 144px, 30px);
+    }
+
+    55% {
+        clip: rect(106px, 350px, 148px, 30px);
+    }
+
+    60% {
+        clip: rect(4px, 350px, 41px, 30px);
+    }
+
+    65% {
+        clip: rect(17px, 350px, 102px, 30px);
+    }
+
+    70% {
+        clip: rect(18px, 350px, 43px, 30px);
+    }
+
+    75% {
+        clip: rect(78px, 350px, 69px, 30px);
+    }
+
+    80% {
+        clip: rect(126px, 350px, 28px, 30px);
+    }
+
+    85% {
+        clip: rect(72px, 350px, 89px, 30px);
+    }
+
+    90% {
+        clip: rect(21px, 350px, 75px, 30px);
+    }
+
+    95% {
+        clip: rect(61px, 350px, 149px, 30px);
+    }
+
+    100% {
+        clip: rect(32px, 350px, 57px, 30px);
+    }
+}
+
+@keyframes glitch-animation-2 {
+    0% {
+        clip: rect(102px, 350px, 45px, 30px);
+    }
+
+    5% {
+        clip: rect(72px, 350px, 102px, 30px);
+    }
+
+    10% {
+        clip: rect(44px, 350px, 103px, 30px);
+    }
+
+    15% {
+        clip: rect(130px, 350px, 134px, 30px);
+    }
+
+    20% {
+        clip: rect(134px, 350px, 18px, 30px);
+    }
+
+    25% {
+        clip: rect(47px, 350px, 142px, 30px);
+    }
+
+    30% {
+        clip: rect(30px, 350px, 28px, 30px);
+    }
+
+    35% {
+        clip: rect(67px, 350px, 108px, 30px);
+    }
+
+    40% {
+        clip: rect(48px, 350px, 108px, 30px);
+    }
+
+    45% {
+        clip: rect(44px, 350px, 56px, 30px);
+    }
+
+    50% {
+        clip: rect(42px, 350px, 66px, 30px);
+    }
+
+    55% {
+        clip: rect(11px, 350px, 79px, 30px);
+    }
+
+    60% {
+        clip: rect(82px, 350px, 141px, 30px);
+    }
+
+    65% {
+        clip: rect(112px, 350px, 44px, 30px);
+    }
+
+    70% {
+        clip: rect(28px, 350px, 73px, 30px);
+    }
+
+    75% {
+        clip: rect(124px, 350px, 19px, 30px);
+    }
+
+    80% {
+        clip: rect(120px, 350px, 126px, 30px);
+    }
+
+    85% {
+        clip: rect(86px, 350px, 105px, 30px);
+    }
+
+    90% {
+        clip: rect(47px, 350px, 44px, 30px);
+    }
+
+    95% {
+        clip: rect(19px, 350px, 100px, 30px);
+    }
+
+    100% {
+        clip: rect(111px, 350px, 128px, 30px);
+    }
+}
+
+/*Todo: Boton de Regreso */
 .regreso .ti {
     color: #fff;
     text-decoration: none;
@@ -169,6 +396,7 @@ body {
     scale: 0.95;
 }
 
+/*? Responsive de Distintas Secciones para Mobile */
 @media (width < 420px) {
     .regreso .ti {
         right: 25px;
@@ -179,7 +407,7 @@ body {
         display: none;
     }
 
-    .team {
+    .wraper {
         font-size: 1.3rem;
     }
 }
