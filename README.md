@@ -1,4 +1,4 @@
-Snacktural
+# Snacktural
 
 Sitio web E-Comers basado principalmente en HTML, CSS & JavaScript.
     Cumple la funcionalidad de agregar y eliminar productos de un carrito de compras, asi como también
